@@ -1021,7 +1021,7 @@ def lex(module=None, object=None, debug=False, optimize=False, lextab='lextab',
     lexer = lexobj
 
     # If in optimize mode, we write the lextab
-    if lextab and optimize:
+    if lextab and not optimize:
         if outputdir is None:
             # If no output directory is set, the location of the output files
             # is determined according to the following rules:
